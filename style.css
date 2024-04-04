@@ -1,38 +1,70 @@
-/* Enhanced Professional Theme */
+/* Base Styles */
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Professional, clean font choice */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     color: #333;
-    background-color: #f5f5f5; /* Soft background color for a subtle, professional look */
+    background-color: #f5f5f5;
 }
 
+/* Header Styles */
 header {
-    background-color: #0056b3; /* Darker shade of blue for a more professional look */
+    background-color: #004d40; /* A deep green to reflect the Diatom Dive theme */
     color: #ffffff;
-    padding: 20px 40px; /* Added horizontal padding for content breathing space */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Slightly more pronounced shadow for depth */
+    padding: 20px 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 header h1, header p {
-    margin: 0; /* Resetting margins for clean alignment */
+    margin: 0;
 }
 
+/* Navigation Bar Enhancements */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #00796b; /* Slightly lighter green for contrast */
+    box-shadow: 0 3px 5px rgba(0,0,0,0.15);
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #b2dfdb; /* Light green for hover effect */
+}
+
+/* Section Styles */
 section {
-    padding: 20px 40px; /* Consistent padding with header */
+    padding: 20px 40px;
     background: #ffffff;
-    margin: 20px 40px; /* Added margin for better structure and spacing */
+    margin: 20px 40px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    border-radius: 8px; /* Rounded corners for a modern look */
+    border-radius: 8px;
 }
 
 section h2 {
-    color: #0056b3; /* Consistent theme color for section titles */
-    border-bottom: 2px solid #eee; /* Subtle line for section separation */
-    padding-bottom: 10px; /* Spacing for the line */
+    color: #004d40; /* Echoing the header's green */
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
 }
 
+/* List and Link Styles */
 ul {
     list-style-type: none;
     padding: 0;
@@ -44,63 +76,95 @@ ul li {
 
 ul li a {
     text-decoration: none;
-    color: #0056b3;
+    color: #00796b; /* Matching navigation green */
     font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #b2dfdb; /* Light green for consistency */
 }
 
+/* Footer Styles */
 footer {
-    background-color: #0056b3;
+    background-color: #004d40;
     color: #ffffff;
     text-align: center;
     padding: 20px 0;
     margin-top: 40px;
 }
 
-/* Contact Form Enhancements */
+/* Form Styling Enhancements */
 form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 20px auto;
+    max-width: 600px; /* Limit form width for better aesthetics */
+    margin: 0 auto; /* Center form in the section */
+    padding: 20px; /* Add some padding inside the form for spacing */
+    background: #ffffff; /* Optional: can match the site's theme or section background */
+    border-radius: 8px; /* Soften edges */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Subtle shadow for depth */
 }
 
-form input, form textarea {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+form input, form textarea, form button {
+    width: 100%; /* Make input and button take full width of the form */
+    padding: 12px; /* Increase padding for larger, more clickable areas */
+    border: 2px solid #ccc; /* Slightly thicker border for more definition */
+    margin-bottom: 15px; /* Ensure consistent margin at the bottom */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+form input[type="email"], form textarea {
+    height: 45px; /* Uniform height for inputs */
+    font-size: 16px; /* Increase font size for readability */
+}
+
+form textarea {
+    height: auto; /* Override height for textarea to be different */
+    min-height: 120px; /* Minimum height for textarea to accommodate more text */
 }
 
 form button {
-    background-color: #007bff;
+    background-color: #00796b; /* Green theme */
     color: #ffffff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+    font-weight: bold; /* Make button text more prominent */
     cursor: pointer;
+    border: none; /* Remove border from button for a cleaner look */
     transition: background-color 0.3s ease;
+    text-transform: uppercase; /* Optional: stylistic choice to make the button stand out */
 }
 
-form button:hover {
-    background-color: #0056b3; /* Darker shade on hover for interaction feedback */
+form button:hover, form button:focus {
+    background-color: #004d40; /* Darker shade on hover/focus for interaction feedback */
+    outline: none; /* Remove outline on focus to maintain clean aesthetics */
 }
 
-/* Consistent alignment for sections and titles */
-section#contact h2 {
-    text-align: center; /* Aligning the 'Contact Me' title to the center */
+.form-group {
+    display: flex; /* Use flex layout for form groups */
+    flex-direction: column; /* Stack label and input vertically */
+    align-items: stretch; /* Stretch children to fill the width of the form group */
 }
 
-/* Responsive Design for smaller screens */
+/* Responsive Design Adjustments */
 @media (max-width: 768px) {
-    header, section, footer {
-        padding: 20px; /* Adjust padding for smaller screens */
+    form {
+        padding: 15px; /* Slightly reduce padding on smaller screens */
+        margin: 20px; /* Adjust margin to ensure form doesn't touch the edges */
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header, section, footer, nav ul li {
+        padding: 20px;
+        margin: 10px 0; /* Adjusting for smaller screens */
     }
 
-    section {
-        margin: 20px; /* Adjust section margins for smaller screens */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Spacing for vertical nav items */
     }
 }
